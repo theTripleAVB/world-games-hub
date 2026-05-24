@@ -9,12 +9,6 @@ import { useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: Home,
-  head: () => ({
-    meta: [
-      { title: "World Games RA — O maior universo de games por assinatura" },
-      { name: "description", content: "5.000+ jogos online por uma única assinatura. Multiplayer, cloud, day-one. Comece grátis 7 dias." },
-    ],
-  }),
 });
 
 function Home() {

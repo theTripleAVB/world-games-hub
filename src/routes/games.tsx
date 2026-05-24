@@ -8,7 +8,6 @@ import { CATEGORIES, GAMES } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/games")({
   component: Games,
-  head: () => ({ meta: [{ title: "Catálogo de Games — World Games RA" }, { name: "description", content: "Explore mais de 5.000 jogos. RPG, FPS, corrida, terror e mais." }] }),
 });
 
 function Games() {

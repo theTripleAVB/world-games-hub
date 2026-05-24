@@ -3,14 +3,10 @@ import {
   Outlet,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { useApp } from "@/lib/store";
 import { Toaster } from "@/components/ui/sonner";
-
-import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
@@ -47,32 +43,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "World Games RA — O maior universo de games por assinatura" },
-      { name: "description", content: "Acesse mais de 5.000 jogos online com uma única assinatura. Multiplayer, cloud saves e lançamentos no day-one." },
-      { property: "og:title", content: "World Games RA" },
-      { property: "og:description", content: "O maior universo de games por assinatura." },
-      { property: "og:type", content: "website" },
-    ],
-    links: [{ rel: "stylesheet", href: appCss }],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="pt-BR">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
-    </html>
-  );
-}
 
 function ThemeSync() {
   const theme = useApp((s) => s.theme);

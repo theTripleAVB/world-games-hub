@@ -8,7 +8,6 @@ import { FAQ } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/faq")({
   component: FaqPage,
-  head: () => ({ meta: [{ title: "FAQ — World Games RA" }, { name: "description", content: "Perguntas frequentes sobre assinatura, planos e jogos." }] }),
 });
 
 function FaqPage() {

@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 
 export const Route = createFileRoute("/plans")({
   component: Plans,
-  head: () => ({ meta: [{ title: "Planos — World Games RA" }, { name: "description", content: "Escolha seu plano. A partir de R$24,99/mês." }] }),
 });
 
 function Plans() {

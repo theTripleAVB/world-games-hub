@@ -9,7 +9,6 @@ import { toast } from "sonner";
 
 export const Route = createFileRoute("/checkout")({
   component: Checkout,
-  head: () => ({ meta: [{ title: "Checkout — World Games RA" }] }),
 });
 
 const STEPS = ["Plano", "Dados", "Pagamento"];

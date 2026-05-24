@@ -6,7 +6,6 @@ import { useApp } from "@/lib/store";
 
 export const Route = createFileRoute("/login")({
   component: Login,
-  head: () => ({ meta: [{ title: "Entrar — World Games RA" }] }),
 });
 
 function Login() {

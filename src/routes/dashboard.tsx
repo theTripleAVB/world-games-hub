@@ -9,7 +9,6 @@ import { useApp } from "@/lib/store";
 
 export const Route = createFileRoute("/dashboard")({
   component: Dashboard,
-  head: () => ({ meta: [{ title: "Dashboard — World Games RA" }] }),
 });
 
 const TABS = [
